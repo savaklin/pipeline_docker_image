@@ -11,9 +11,8 @@ RUN echo "APT::Get::Assume-Yes \"true\";" > /etc/apt/apt.conf.d/90assumeyes
 ENV PATH="/tools:${PATH}"
 
 # Install basics
-RUN apt-get update \
-    && apt-get install curl zip unzip \
+RUN apt update \
+    && apt install curl zip unzip \
     # Install Python and common modules
-    && apt update \
     && apt install python3.9 python3-pip \
-    && pip install --no-cache datetime az.cli opencensus.ext.azure azure-functions azure-devops termcolor pprint
+    && pip install --no-cache datetime az.cli opencensus.ext.azure azure-functions azure-devops termcolor
