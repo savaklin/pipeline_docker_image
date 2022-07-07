@@ -16,3 +16,5 @@ RUN apt update \
     # Install Python and common modules
     && apt install python3.9 python3-pip \
     && pip install --no-cache datetime az.cli opencensus.ext.azure azure-functions azure-devops termcolor
+
+WORKDIR /tools
