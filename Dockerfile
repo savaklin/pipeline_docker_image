@@ -17,4 +17,4 @@ RUN apt update \
     && apt install python3.9 python3-pip \
     && pip install --no-cache datetime az.cli opencensus.ext.azure azure-functions azure-devops termcolor
 
-WORKDIR /tools
+WORKDIR /azp
